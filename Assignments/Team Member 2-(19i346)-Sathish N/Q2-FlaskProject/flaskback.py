@@ -33,7 +33,8 @@ def get_product_by_pathobid(obid):
 def delete_product(obid): 
     for product in products_dict:
         if product['obid'] == int(obid):
-            products_dict.remove(product) 
+            products_dict.remove(product)
+            return{"msg":"product deleted sucessfully"}
     return {"Error":"Product with given id not found"}
 
 @app.route('/addproduct', methods=['POST'])
@@ -48,8 +49,9 @@ def put_product():
     product = request.get_json() 
     for i, p in enumerate(products_dict): 
         if p['obid'] == product['obid']:
-            products_dict[i] = product 
-    return {"Error":"Product with given id not found"}
+            products_dict[i] = product
+            return {"msg":"Sucess"}
+    return {"Error":"Product not found"}
 
 
 
