@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+    <head>        
+        <title>Display Page</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div id="content">
+            <h3 style="text-align: center">
+                <b> Display Page</b>
+            </h3>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Full Name</th>
+                        <td id="name"></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td id="email"></td>
+                    </tr>
+                    <tr>
+                        <th>Qualification</th>
+                        <td id="qualification"></td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td id="age"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script>
+            _name = document.getElementById("name");
+            _qual = document.getElementById("qualification");
+            _age = document.getElementById("age");
+            _email = document.getElementById("email");
+
+            const params = new URLSearchParams(window.location.search);
+
+            _name.innerText = params.get("name");
+            _qual.innerText = params.get("qualification");
+            _age.innerText = params.get("age");
+            _email.innerText = params.get("email");
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
