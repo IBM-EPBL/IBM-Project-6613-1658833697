@@ -25,7 +25,7 @@ def get_product_by_obid():
 @app.route("/products/<obid>", methods=['GET'])
 def get_product_by_pathobid(obid): 
     for product in products_dict: 
-        if product['obid'] == int(obid):
+        if product['obid'] == int(obid): 
             return jsonify (product) 
     return {"Error":"Product with given id not found"}
 
