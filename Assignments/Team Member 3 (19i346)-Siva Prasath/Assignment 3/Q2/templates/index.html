@@ -1,0 +1,22 @@
+<center>
+<a style="color: white; font-size: 20dp;" href="/">Home</a>
+<a style="color: white; font-size: 20dp;"href="/uploader">Upload</a>
+<a style="color: white; font-size: 20dp;"href="/deletefile">Delete</a>
+<br><hr>
+</center>
+<!doctype html>
+<html>
+    <head>
+        <h1>IBM ASSIGNMENT 3</h1>
+        <link rel="stylesheet" href="https://vir-bucket.s3.us-east.cloud-object-storage.appdomain.cloud/style.css">
+    </head>
+      <body>
+      {% for row in files %}
+        <div>
+            <h3>Image Name : {{row}} </h3>
+            <img src="https://vir-bucket.s3.us-east.cloud-object-storage.appdomain.cloud/{{row}}" width="500px"></td>
+         </div>
+         
+      {% endfor %}
+   </body>
+</html>
