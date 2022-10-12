@@ -4,8 +4,8 @@ from ibm_botocore.client import Config, ClientError
 
 # Constants for IBM COS values
 COS_ENDPOINT = "https://s3.us-east.cloud-object-storage.appdomain.cloud" 
-COS_API_KEY_ID = "nmhjb4EswnJQCE2QKsGuv9YMakM2fhGR5L_FB5LUhwl1"
-COS_INSTANCE_CRN = "crn:v1:bluemix:public:cloud-object-storage:global:a/3d2afddbd3b246eebdfa5555458bb535:b63a213a-fd4f-4fc3-91da-1df41b661e67:bucket:vir-bucket"
+COS_API_KEY_ID = "KLfwQZUmPcWkKbgwbTFyE-BXafPRvpNRQHVSniKsl6yG"
+COS_INSTANCE_CRN = "crn:v1:bluemix:public:cloud-object-storage:global:a/6d03a482abb143e49d274fd6e3cb4e1a:b4af6af5-70b0-42c1-9c93-def45713d580:bucket:siva-bucket"
 
 
 # Create resource
@@ -90,7 +90,7 @@ def multi_part_upload(bucket_name, item_name, file_path):
 
 @app.route('/')
 def index():
-    files = get_bucket_contents('vir-bucket')
+    files = get_bucket_contents('siva-bucket')
     
     return render_template('index.html', files = files)
 
