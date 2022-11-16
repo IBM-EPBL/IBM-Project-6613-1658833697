@@ -119,13 +119,6 @@ def login():
     return render_template('login.html', msg = msg)
 
 
-
-       
-
-
-
-
-
 #ADDING----DATA
 
 
