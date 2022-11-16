@@ -195,7 +195,7 @@ def addexpense():
         try:
             server = smtplib.SMTP_SSL('smtp.sendgrid.net', 465)
             server.ehlo()
-            server.login('apikey', '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')
+            server.login('apikey', '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')
             server.sendmail(mail_from, mail_to, msg.as_string())
             server.close()
             print("mail sent")
