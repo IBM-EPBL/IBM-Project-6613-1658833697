@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+/* resetting the mar and pad */
+/* animation */
+@keyframes rdbutton{
+    0%   {background-color:red; }
+    25%  {background-color:green; }
+    50%  {background-color:blue; }
+    75%  {background-color:violet; }
+    100% {background-color:purple; }
+  }
+html {
+    scroll-behavior: smooth;
+  }
+*{  
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: white;
+    line-height: 1.6em;
+    color: black;
+    background-color: #F1F4F9;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+h1,h2{
+    font-weight: 200px;
+    line-height: 1.2em;
+
+}
+p{
+    margin: 10px 0;
+}
+img{
+    width: 100%;
+}
+/* navbar */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fcf5f5ff;
+    opacity: 0.8;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top:0px;
+    padding:0 30px;
+    z-index: +25;
+    
+}
+
+.navbar a{
+    color: #fcf5f5ff;
+    padding: 10px 20px;
+    margin: 0 5px;
+
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+}
+.navbar a:hover{
+    color: red;
+   
+    border-bottom: #990011FF  solid 2px;
+    border-top: #990011FF  solid 2px;
+    
+}
+
+/* header */
+
+.header{
+    background:url('../images/bg3.png') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: red;
+}
+   
+.header .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+.header .content h1{
+    font-size: 55px;
+}
+.header .content p{
+    font-size: 23px;
+    max-width:  600px ;
+    margin: 20px 0px 30px;
+}
+
+.content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.6);
+   
+}
+.content *{
+    z-index: 10;
+}
+.content a{
+    transition: width 2s;
+    position: relative;
+    animation-name:rdbutton;
+    animation-iteration-count:infinite;
+    animation-duration: 10s;
+    
+}
+.content a:hover{
+    width: 160px;
+    
+    
+}
+
+.icons{
+    padding: 30px;
+    background: #F1F4F9;
+}
+.icons h3{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.icons i{
+    padding: 10px;
+    background-color: rgb(17, 114, 175);
+    border-radius: 50%;
+    color:#fcf5f5ff;
+    padding: 1rem;
+    margin-bottom:15px ;
+
+}
+
+
+.flex-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+#main-footer {
+    text-align: center;
+    background: #444;
+    color: #fff;
+    padding: 20px;
+  }
